@@ -27,7 +27,9 @@ jobs:
         run: poetry install
 
       - name: Run tests
-        run: poetry run pytest
+        run: |
+          pip install pytest
+          poetry run pytest
 
       - name: Build package
         run: poetry build
