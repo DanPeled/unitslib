@@ -28,6 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
+          eval $(poetry env activate)
           pip install pytest
           poetry run pytest
 
